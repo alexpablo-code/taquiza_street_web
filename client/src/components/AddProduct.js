@@ -8,6 +8,7 @@ import {useNavigate} from 'react-router-dom';
 const AddProduct = () => {
     const navigate = useNavigate()
     const[product, setProduct] = useState({})
+    const[errors, setErrors] = useState({})
 
     const submitHandler =(e) => {
         e.preventDefault();
@@ -18,7 +19,7 @@ const AddProduct = () => {
             })
             .catch((err) => {
                 console.log(err);
-
+                setErrors(err.response.data.errors)
                 //we will set errors here
             })
     }
@@ -26,7 +27,7 @@ const AddProduct = () => {
     return (
         <div>
             <NavBar/>
-            <ProductForm product={product} setProduct={setProduct} submitHandler={submitHandler} />
+            <ProductForm product={product} setProduct={setProduct} submitHandler={submitHandler} errors={errors}/>
             <Footer/>
         </div>
     );

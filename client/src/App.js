@@ -16,6 +16,7 @@ function App() {
         <Route path='/store-manager'>
           <Route index element={<StoreManager allProducts ={allProducts} setAllProducts={setAllProducts}/>} />
           <Route path='addproduct' element={<AddProduct/>} />
+          
         </Route>
       </Routes>
       </div>

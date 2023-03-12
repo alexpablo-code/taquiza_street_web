@@ -4,7 +4,7 @@ const ProductsTable = ({allProducts, setAllProducts}) => {
     return (
         <div>
             <div className='container'>
-                <table className='table table-striped'>
+                <table className='table table-striped my-4'>
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -20,7 +20,7 @@ const ProductsTable = ({allProducts, setAllProducts}) => {
                         </tr>
                         {
                             allProducts.map((item) => (
-                                <tr>
+                                <tr key={item._id}>
                                     <td>{item.name}</td>
                                     <td>{item.price}</td>
                                     <td><Link>Edit</Link> <Link>Delete</Link></td>
