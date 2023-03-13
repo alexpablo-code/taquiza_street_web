@@ -24,7 +24,7 @@ module.exports = {
             .then((product) => {
                 res.json(product)
             })
-            .then((err) => {
+            .catch((err) => {
                 res.status(500).json(err)
             });
     },
