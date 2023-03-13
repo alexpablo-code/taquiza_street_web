@@ -11,7 +11,7 @@ const NavBar = () => {
                         </div>
                         <div className='col-5 offset-2'>
                             <ul>
-                                <li><Link className='text-light'>Menu</Link></li>
+                                <li><Link to={'/menu'} className='text-light'>Menu</Link></li>
                             </ul>
                         </div>
                     </div>

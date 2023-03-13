@@ -29,3 +29,18 @@ code {
   bottom: 0;
   width: 100%;
 }
+
+.itemsContainer{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.foodItemCard{
+  margin: 10px 5px;
+  padding: 5px;
+  border: 1px solid red;
+  border-radius: 15px;
+}
+.foodItemCard:hover{
+  background-color: rgb(220, 20, 60, 0.2);
+}

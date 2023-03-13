@@ -1,12 +1,23 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './components/Home';
 import StoreManager from './components/StoreManager';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import AddProduct from './components/AddProduct';
 import EditProduct from './components/EditProduct';
+import Menu from './components/Menu';
+import axios from 'axios';
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/allproducts')
+        .then((products) => {
+            console.log(products)
+            setAllProducts(products.data)
+        })
+        .catch((err) => console.log(err));
+},[])
 
 
   return (
@@ -14,6 +25,7 @@ function App() {
       <div className="App">
       <Routes>
         <Route path='/' element={<Home/>} />
+        <Route path='/menu' element={<Menu  allProducts={allProducts} />} />
         <Route path='/store-manager'>
           <Route index element={<StoreManager allProducts ={allProducts} setAllProducts={setAllProducts}/>} />
           <Route path='addproduct' element={<AddProduct/>} />
