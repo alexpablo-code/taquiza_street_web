@@ -29,6 +29,17 @@ const StoreManager = ({allProducts, setAllProducts}) => {
                 .catch((err) => console.log(err));
         }
 
+        const logout = () => {
+            axios.post('http://localhost:8000/api/logout', {}, {withCredentials:true})
+                .then((res) => {
+                    console.log(res);
+                    navigate('/')
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
+        }
+
 
     return (
         <div>
@@ -47,6 +58,7 @@ const StoreManager = ({allProducts, setAllProducts}) => {
                 </div>
             </section>
             <ProductsTable allProducts={allProducts} setAllProducts={setAllProducts} deleteItem={deleteItem}/>
+            <button onClick={logout} >Logout</button>
             <Footer/>
         </div>
     );
