@@ -18,9 +18,10 @@ code {
 }
 
 .hero-bg{
-  background-image: url('../src/components/images/hero_img.jpg');
+  /* background-image: url('../src/components/images/hero_img.jpg'); */
+  background-image: url('../src/components/images/tacoshero.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: 0% 80%;
   height: 500px;
 }
 
