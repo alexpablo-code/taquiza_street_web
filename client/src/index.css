@@ -45,6 +45,14 @@ code {
   background-color: rgb(220, 20, 60, 0.2);
 }
 
+.breakfastSec{
+  /* margin: 20px; */
+}
+
+
 .img-side img{
-  height: 400px;
+  height: 370px;
+  width: 300px;
+  object-fit: cover;
+  border: 2px solid black;
 }
