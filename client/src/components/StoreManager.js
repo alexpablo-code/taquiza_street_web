@@ -17,7 +17,7 @@ const StoreManager = ({allProducts, setAllProducts}) => {
                 })
                 .catch((err) => console.log(err));
                 setAllProducts([])
-                navigate('/')
+                // navigate('/')
         },[])
 
 

@@ -9,7 +9,7 @@ module.exports.authenticate = (req,res,next) => {
         else{
             console.log('Authenticated')
             req.user = payload
-            console.log(payload);
+            console.log("PAYLOAD", payload);
             next();
         }
     })

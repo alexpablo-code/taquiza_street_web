@@ -44,3 +44,7 @@ code {
 .foodItemCard:hover{
   background-color: rgb(220, 20, 60, 0.2);
 }
+
+.img-side img{
+  height: 400px;
+}
