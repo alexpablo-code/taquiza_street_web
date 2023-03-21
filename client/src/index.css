@@ -61,7 +61,7 @@ code {
 .gallery-container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-gap: 1rem;
 }
 
@@ -69,4 +69,10 @@ code {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.social-img{
+  height: 150px;
+  border-radius: 20px;
+  margin: 10px 5px;
 }

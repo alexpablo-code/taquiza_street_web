@@ -9,7 +9,7 @@ const caliBrto = require('./images/cali_brto.jpg')
 const Gallery = () => {
     return (
         <div className='container text-center'>
-            <h1>Gallery</h1>
+            <h4>Gallery</h4>
             <div className='gallery-container'>
                 <figure className='gallery-item'>
                     <img className='gallery-img' src={asadaF} alt="" />
@@ -29,7 +29,6 @@ const Gallery = () => {
                 <figure>
                     <img className='gallery-img' src={caliBrto} alt="" />
                 </figure>
-
             </div>
             
         </div>

@@ -4,6 +4,7 @@ import Gallery from "./Gallery";
 import HeroSec from "./HeroSec";
 import InfoSec from "./InfoSec";
 import NavBar from "./NavBar";
+import Socials from "./Socials";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <BreakfastSec/>
             <InfoSec/>
             <Gallery/>
+            <Socials/>
             <Footer/>
         </div>
     );
