@@ -59,8 +59,10 @@ const StoreManager = ({allProducts, setAllProducts}) => {
                     </div>
                 </div>
             </section>
+            <div className='container d-flex justify-content-end'>
+                <button className='btn btn-sm btn-primary' onClick={logout} >Logout</button>
+            </div>
             <ProductsTable allProducts={allProducts} setAllProducts={setAllProducts} deleteItem={deleteItem}/>
-            <button onClick={logout} >Logout</button>
             <Footer/>
         </div>
     );

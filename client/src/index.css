@@ -22,7 +22,7 @@ code {
   background-image: url('../src/components/images/tacoshero.jpg');
   background-size: cover;
   background-position: 0% 80%;
-  height: 500px;
+  height: 70vh;
 }
 
 .footer{
