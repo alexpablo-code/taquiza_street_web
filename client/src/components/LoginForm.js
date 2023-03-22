@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const LoginForm = ({user, setUser, submitHandler}) => {
+const LoginForm = ({user, setUser, submitHandler, errors}) => {
 
     const onChangeHandler = (e) => {
         setUser({...user, [e.target.name]: e.target.value})
@@ -16,6 +16,11 @@ const LoginForm = ({user, setUser, submitHandler}) => {
 
                 <label className='form-label'>Password:</label>
                 <input className='form-control' type="password" name="password" value={user.password} onChange={onChangeHandler}/>
+                {
+                    errors.message?
+                    <p className='text-danger' >{errors.message}</p>:
+                    null
+                }
 
                 <button className='btn btn-warning my-3'>Login</button> <br/> 
                 <Link className='my-3' to={'/manager-register'}>Click here to Register</Link>

@@ -17,6 +17,15 @@ code {
   padding: 0;
 }
 
+/* .navLinks li:hover{
+  background-color: gray;
+} */
+
+.logo{
+  height: 100px;
+  margin-right: 10px;
+}
+
 .hero-bg{
   /* background-image: url('../src/components/images/hero_img.jpg'); */
   background-image: url('../src/components/images/tacoshero.jpg');
@@ -38,9 +47,10 @@ code {
 
 .foodItemCard{
   margin: 10px 5px;
-  padding: 5px;
-  border: 1px solid red;
+  padding: 8px;
+  /* border: 1px solid red; */
   border-radius: 15px;
+  background-color: rgb(156, 155, 155, .2);
 }
 .foodItemCard:hover{
   background-color: rgb(220, 20, 60, 0.2);

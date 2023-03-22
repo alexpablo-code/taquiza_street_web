@@ -13,11 +13,6 @@ const ProductsTable = ({allProducts, setAllProducts, deleteItem}) => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>sample</td>
-                            <td>sample</td>
-                            <td><Link>Edit</Link> <Link>Delete</Link></td>
-                        </tr>
                         {
                             allProducts.map((item) => (
                                 <tr key={item._id}>

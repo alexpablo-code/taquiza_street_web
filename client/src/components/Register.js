@@ -7,6 +7,7 @@ import RegisterForm from './RegisterForm';
 
 const Register = () => {
     const navigate = useNavigate();
+    const [errors, setErrors] = useState({});
 
     const[user, setUser] = useState({
         firstName: '',
@@ -25,7 +26,8 @@ const Register = () => {
                 navigate('/store-manager')
             })
             .catch((err) => {
-                console.log(err);
+                console.log(err.response.data.error.errors);
+                setErrors(err.response.data.error.errors);
             })
     }
 
@@ -35,7 +37,7 @@ const Register = () => {
     return (
         <div>
             <NavBar/>
-            <RegisterForm user={user} setUser={setUser} submitHandler={submitHandler} />
+            <RegisterForm user={user} setUser={setUser} submitHandler={submitHandler} errors={errors}/>
             <Footer/>
         </div>
     );

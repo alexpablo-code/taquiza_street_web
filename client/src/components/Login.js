@@ -7,6 +7,7 @@ import NavBar from './NavBar';
 
 const Login = () => {
     const navigate = useNavigate();
+    const[errors, setErrors] = useState({})
 
     const[user, setUser] = useState({
         email:"",
@@ -22,7 +23,8 @@ const Login = () => {
                 navigate('/store-manager')
             })
             .catch((err) => {
-                console.log(err);
+                console.log(err.response.data);
+                setErrors(err.response.data);
             })
     }
 
@@ -33,7 +35,7 @@ const Login = () => {
     return (
         <div>
             <NavBar/>
-            <LoginForm user={user} setUser={setUser} submitHandler={submitHandler} />
+            <LoginForm user={user} setUser={setUser} submitHandler={submitHandler} errors={errors} />
             <Footer/>
         </div>
     );
