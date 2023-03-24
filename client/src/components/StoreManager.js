@@ -25,8 +25,9 @@ const StoreManager = ({allProducts, setAllProducts}) => {
             axios.delete(`http://localhost:8000/api/allproducts/delete/${id}`)
                 .then((res) => {
                     console.log("item deleted", res)
-                    navigate('/')
-                    //have to change navigate to changing the allproducts state to remove the item we just deleted
+                    let updatedProducts= allProducts.filter(item => item._id !== id)
+                    setAllProducts(updatedProducts);
+                    
                 })
                 .catch((err) => console.log(err));
         }
