@@ -1,6 +1,6 @@
 # Taquiza Street
 
-[!(/client/src/components/images/screenshot_home.jpg "home_page")]
+[!(/client/src/components/images/screenshot_home.jpg)]
 
 ##Overview
 Full Stack Web Application for a taco truck to diplay products and manager login to edit products.
