@@ -4,8 +4,8 @@ let brkbrto = require('./images/breakfast_burrito.jpg')
 const BreakfastSec = () => {
     return (
         <div className='container my-4'>
-            <div className='row justify-content-center'>
-                <div className='col-5 my-auto'>
+            <div className='breakfastSec text-center'>
+                <div className='my-auto'>
                     <h1 className='text-danger' >Breakfast Burritos</h1>
                     <p>6 Different burritos
                         that you must try! <br/>
@@ -14,7 +14,7 @@ const BreakfastSec = () => {
                         Sunday at 9am
                         Breakfast ends at 11am</p>
                 </div>
-                <div className='col-5 img-side'>
+                <div className='img-side'>
                     <img src={brkbrto} alt="breakfast-burritos" />
                 </div>
 
