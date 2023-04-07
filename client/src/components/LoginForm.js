@@ -11,11 +11,11 @@ const LoginForm = ({user, setUser, submitHandler, errors}) => {
         <div className='container my-3'>
             <form className='col-5 offset-3' onSubmit={submitHandler}>
                 <h2>Login</h2>
-                <label className='form-label'>Email:</label>
-                <input className='form-control' type="text" name="email" value={user.email} onChange={onChangeHandler}/>
+                <label className='form-label' htmlFor='email' >Email:</label>
+                <input className='form-control'  id='email' type="text" name="email" value={user.email} onChange={onChangeHandler}/>
 
-                <label className='form-label'>Password:</label>
-                <input className='form-control' type="password" name="password" value={user.password} onChange={onChangeHandler}/>
+                <label className='form-label' htmlFor='password' >Password:</label>
+                <input className='form-control'  id='password' type="password" name="password" value={user.password} onChange={onChangeHandler}/>
                 {
                     errors.message?
                     <p className='text-danger' >{errors.message}</p>:

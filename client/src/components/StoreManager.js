@@ -8,8 +8,29 @@ import {Link, useNavigate} from 'react-router-dom';
 
 const StoreManager = ({allProducts, setAllProducts}) => {
     const navigate = useNavigate()
+    const [authenticated, setAuthenticated] = useState({});
 
         useEffect(() => {
+            //so the Correct way to send a user token to verify is to send it in headers and bearers type
+            //install in client side js-cookie and import Cookies form 'js-cookie'
+            //const token = Cookies.get('jwtToken'); or the name of the cookie which in this case is user token
+            // const headers = {
+            //     Authorization: `Bearer ${token}`,
+            //     'Content-Type': 'application/json',
+            //   };
+            
+            //   axios.post('http://localhost:8000/api/register', user, { headers })
+            
+
+            axios.post('http://localhost:8000/api/authenticated', {}, {withCredentials:true})
+                .then((res) => {
+                    console.log(res);
+                })
+                .catch((err) => {
+                    console.log(err);
+                    navigate('/');
+                })
+
             axios.get('http://localhost:8000/api/allproducts')
                 .then((products) => {
                     console.log(products)
@@ -17,7 +38,6 @@ const StoreManager = ({allProducts, setAllProducts}) => {
                 })
                 .catch((err) => console.log(err));
                 setAllProducts([])
-                // navigate('/')
         },[])
 
 

@@ -1,7 +1,7 @@
-
+const SECRETKEY= process.env.TAQUIZA_SECRET
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://ronyalexis0:taquiza360.@taquiza.pppzvcf.mongodb.net/taquiza?retryWrites=true&w=majority', {
+mongoose.connect(`mongodb+srv://ronyalexis0:${SECRETKEY}@taquiza.pppzvcf.mongodb.net/taquiza?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
